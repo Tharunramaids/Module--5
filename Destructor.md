@@ -1,31 +1,41 @@
 # Exp.No:22  
 ## Destructor
 
----
-
 ### AIM  
-To create a Python class `Student` with a destructor.
 
----
+To create a Python to Add the destructor in the following python code.
 
 ### ALGORITHM
 
 1. Begin the program.  
-2. Define the `student` class.  
-3. Inside the `student` class, define the `__init__` method (constructor) and the `__del__` method (destructor).  
-4. Create an object `s2` of the `student` class. When the object `s2` is created, the `__init__` method is called, and its print statements are executed.  
-5. Use the `del` statement to delete the object `s2`. This triggers the `__del__` method (destructor), and the respective print statements are executed.  
-6. Terminate the program.
-
----
+2. Define a class Fruits with a __del__ method that prints "Fruits deleted" when an object is deleted.
+3. Create an object a of the Fruits class.
+4. Delete the object a using del which calls the __del__ method and prints "Fruits deleted".
+5. Create another object a, and assign it to a new object b.
+6. Delete object b using del which also calls the __del__ method and prints "Fruits deleted".
+7. Finally, delete object a using del, triggering the __del__ method again and printing "Fruits deleted"
+8. Terminate the program.
 
 ### PROGRAM
 
 ```
 
+class Fruits:
+    def __del__(self):
+        print("Fruits deleted")
+a = Fruits()
+del a
+a = Fruits()
+b = a
+del b
+del a
+
 ```
 
 ### OUTPUT
 
+![image](https://github.com/user-attachments/assets/e498f876-8ab1-4df4-84d6-8c8da1a6ccad)
 
 ### RESULT
+
+Thus the Python to Add the destructor in the following python code was successfully created.
