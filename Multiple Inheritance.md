@@ -1,45 +1,54 @@
 # Exp.No:23  
-## Multiple Inheritance
-
----
+## MULTIPLE INHERITANCE
 
 ### AIM  
-To write a Python program to get the name, attendance, and ID of a student and check if they are eligible for the next module using multiple inheritance. If attendance > 80, the student is eligible; otherwise, not eligible.
 
----
+To write a Python program to Calculate Division using Inheritance.
 
 ### ALGORITHM
 
-1. Define the `Student` class.
-2. Inside the `Student` class, define the `__init__` method (constructor). The `__init__` method accepts two parameters: `name` and `student_id`.
-    - Inside the `__init__` method: Assign the value of `name` to `self.name` and `student_id` to `self.student_id`.
-3. Define the `get_student_info` method inside the `Student` class:
-    - This method should return a string formatted with `self.name` and `self.student_id`.
-4. Define the `Attendance` class, which inherits from the `Student` class.
-5. Inside the `Attendance` class, define the `__init__` method (constructor).
-    - The `__init__` method accepts three parameters: `name`, `student_id`, and `attendance`.
-    - Inside the `__init__` method: Call the parent class constructor `super().__init__(name, student_id)` to initialize `name` and `student_id`. Assign the value of `attendance` to `self.attendance`.
-6. Define the `check_eligibility` method inside the `Attendance` class:
-    - If `self.attendance` is greater than 80, return a formatted string indicating the student is eligible for the module exam.
-    - Otherwise, return a formatted string indicating the student is not eligible for the module exam.
-7. Prompt the user to enter the `name` (as a string), `student_id` (as an integer), and `attendance` (as an integer).
-8. Create an instance `student` of the `Attendance` class, passing the entered `name`, `student_id`, and `attendance` to the constructor.
-9. Call the `check_eligibility` method on the `student` object and print the result.
-10. Terminate the program.
-
----
+1. Start the program.
+2. Define class A with method detail() to set self.a to the global variable a.
+3. Define class B with method details() to set self.b to the global variable b.
+4. Define class calc (inheriting from A and B) with a method div():
+   Print self.a
+   Print self.b
+   Print the division result self.a / self.b.
+5. Input two numbers (a and b) from the user.
+6. Create an object of class calc.
+7. Call methods detail(), details(), and div() using the object to perform and show the division.
+8. Terminate the program.
 
 ### PROGRAM
 
 ```
 
+class A:
+    def detail(self):
+        self.a=a
+class B:
+    def details(self):
+        self.b=b
+class calc(A,B):
+    def div(self):
+        print(" division value1 : ",self.a)
+        print(" division value2 : ",self.b)
+        print(" division value :",self.a/self.b)
+    
+a=int(input())
+b=int(input())
+obj=calc()
+obj.detail()
+obj.details()
+obj.div()
+
 ```
 
 ### OUTPUT
 
+![image](https://github.com/user-attachments/assets/11a0e424-e920-49c4-97e3-d8ae5e1c0571)
 
 ### RESULT
 
-
-
+Thus the Python program to Calculate Division using Inheritance was successfully created.
 
