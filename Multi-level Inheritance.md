@@ -1,48 +1,54 @@
 # Exp.No:24  
-## Multi-level Inheritance
-
----
+## MULTI-LEVEL INHERITANCE
 
 ### AIM  
-To write a Python program to get the name, age, and ID of a person and display them using multilevel inheritance.
 
----
+To write a Python program to Get the name, age and location of a person and display using Multilevel inheritance.
 
 ### ALGORITHM
 
-1. Define the `Person` class:
-   - Inside the `Person` class, define the `__init__` method (constructor) with two parameters: `name` and `age`.
-   - Inside the `__init__` method, assign the `name` to `self.name` and `age` to `self.age`.
-
-2. Define the `PersonDetails` class that inherits from the `Person` class:
-   - Inside the `PersonDetails` class, define the `__init__` method (constructor) with three parameters: `name`, `age`, and `person_id`.
-   - Inside the `__init__` method, call the `__init__` method of the `Person` class using `super()` to initialize `name` and `age`.
-   - Assign `person_id` to `self.person_id`.
-
-3. Define the `DisplayDetails` class that inherits from the `PersonDetails` class:
-   - Inside the `DisplayDetails` class, define the `__init__` method (constructor) with three parameters: `name`, `age`, and `person_id`.
-   - Inside the `__init__` method, call the `__init__` method of the `PersonDetails` class using `super()` to initialize `name`, `age`, and `person_id`.
-
-4. Inside the `DisplayDetails` class, define the `show_details` method:
-   - Inside the `show_details` method, return a formatted string with `self.name`, `self.age`, and `self.person_id`.
-
-5. Prompt the user to enter `name` (string), `age` (integer), and `person_id` (integer).
-
-6. Create an instance `person` of the `DisplayDetails` class, passing `name`, `age`, and `person_id` to the constructor.
-
-7. Call the `show_details` method on the `person` object and print the result.
-
-8. Terminate the program.
-
----
+1. Start the program.
+2. Define class Name with method name() to set self.name from the global variable name.
+3. Define class Age (inheriting Name) with method age() to set self.age from the global variable age.
+4. Define class Location (inheriting Age) with method location() to set self.location from the global variable location.
+5. Define class Person (inheriting Location) with method display() to print self.name, self.age, and self.location.
+6. Input name, age, and location from the user.
+7. Create an object of class Person.
+8. Call methods name(), age(), and location() to set values.
+9. Call display() method to show the collected details.
+10. Terminate the program.
 
 ### PROGRAM
 
 ```
 
+class Name:
+    def name(self):
+        self.name=name
+class Age(Name):
+    def age(self):
+        self.age=age
+class Location(Age):
+    def location(self):
+        self.location=location
+class Person(Location):
+    def display(self):
+        print(f"{self.name} {self.age} {self.location}")
+name=input()
+age=int(input())
+location=input()
+obj=Person()
+obj.name()
+obj.age()
+obj.location()
+obj.display()
 
 ```
 
 ### OUTPUT
 
+![image](https://github.com/user-attachments/assets/0d578f73-5a8e-4c2e-b2ac-5691858e0bbf)
+
 ### RESULT
+
+Thus the Python program to Get the name, age and location of a person and display using Multilevel inheritance was successfully created.
